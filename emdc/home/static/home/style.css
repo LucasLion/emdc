@@ -1,0 +1,303 @@
+
+body {
+    background-color: rgb(25, 25, 25);
+    color: white;
+    font-family: 'Darker Grotesque', sans-serif;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    min-width: 768;
+    }
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+img {
+    width: 100%;
+}
+/* ------ HEADER ------ */
+
+#header {
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 70px;
+
+}
+
+#logo-title {
+    display: flex;
+    justify-content: center;
+    height: 60px;
+    z-index: 99;
+}
+
+#logo-title img {
+    width: 59px;
+    height: 59px;
+    z-index: 99;
+}
+
+#logo-title h2 {
+    padding: 10px;
+    margin: 0px;
+    font-size: 26;
+}
+.header-contact {
+    display: flex;
+    float: right;
+
+}
+
+.header-contact li {
+    display: inline-block;
+    padding: 0px 6px;
+
+}
+
+.header-contact a {
+    text-decoration: none;
+    color: white;
+    opacity: 0.7;
+}
+
+/* ------ cover ------ */
+
+#cover-img {
+    display: flex;
+    margin-top: 100;
+
+    justify-content: center;
+
+}
+
+#cover-img img {
+        width: 80%;
+}
+
+#presentation {
+    margin-left: auto;
+    margin-right: auto;
+
+}
+h1 {
+    font-size: clamp(3rem, 2rem + 3vw, 9rem);
+}
+
+h3 {
+    font-size: 25;
+}
+
+p {
+    font-size: 20;
+}
+#presentation-content {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+/* ------ VIDEO AND MAP ------ */
+
+.main-video-map {
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    max-width: 100%;
+    padding-bottom: 100px;
+}
+
+.main-video {
+    padding-top: 100px;
+}
+.map {
+    padding-bottom: 0;
+}
+.video {
+    margin: 10;
+    width: 23%;
+}
+
+.list-videos {
+    display: flex;
+    flex-direction: row;
+    padding: 40 70;
+    backgorund-color: black;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    justify-content: space-evenly;
+    background-color: black;
+
+}
+
+.list-video > * {
+    flex: 1 1 10em;
+}
+.video-text {
+    font-size: 15;
+    margin: 5px;
+
+}
+
+/* ------ ENDPAGE ------ */
+
+#thanks {
+    text-align: center;
+    padding: 20 80;
+}
+
+#thanks p {
+    font-size: 1.5rem;
+}
+
+.underlined {
+    text-decoration: underline;
+}
+
+#contact-container {
+    background-color: black;
+    padding: 70 70 0 70;
+}
+#contact {
+    background-color: rgb(25, 25, 25);
+    padding: 80;
+    text-align: center;
+}
+
+#contact p {
+    list-style: none;
+}
+
+#contact h2 {
+    font-size: 50;
+    margin: 10 0;
+}
+
+#contact li {
+    margin: 10;
+    font-size: 19;
+}
+
+#contact a {
+    text-decoration: none;
+    color: white;
+    opacity: 0.7;
+}
+#footer {
+    text-align: center;
+    font-size: 15px;
+    padding: 60 20 15 20;
+}
+
+#space-between-icons a{
+    margin: 7px;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .list-videos {
+        display: block;
+        padding: 10;
+        backgorund-color: black;
+        justify-content: center;
+    }
+
+    .video {
+        width: 50%;
+    }
+
+    #contact-container {
+        padding: 0;
+    }
+}
+
+/* ------ HAMBURGER ------ */
+
+.hamburger {
+    position: relative;
+    display: block;
+    width: 35px;
+    cursor: pointer;
+    appearance: none;
+    background: none;
+    outline: none;
+    border: none;
+    z-index: 99;
+}
+
+.hamburger .bar, .hamburger:after, .hamburger:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0px;
+    transition: 0.4s;
+}
+
+.hamburger.is-active:before {
+    transform: rotate(-45deg) translate(-8px, 6px);
+}
+
+.hamburger.is-active:after {
+    transform: rotate(45deg) translate(-9px,-8px);
+}
+
+.hamburger.is-active .bar {
+    opacity: 0;
+}
+
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    min-height: 100vh;
+    display: block;
+    z-index: 98;
+    background-color: rgb(25, 25, 25);
+    padding-top: 120px;
+    transition: 0.4s;
+    opacity: 93%;
+}
+
+.mobile-nav.is-active {
+    left: 0;
+
+}
+.mobile-nav li {
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto 16px;
+    text-align: center;
+    padding: 12px 16px;
+    background-color: rgb(45, 45, 45);
+    color: #FFF;
+    text-decoration: none;
+}
+
+
+.mobile-nav a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+.mobile-nav li:hover {
+    background-color: rgb(65, 65, 65)
+}
+
+@media (min-width: 768px) {
+    .mobile-nav {
+        display: none;
+    }
+
+    .hamburger {
+        display: none;
+    }
+}

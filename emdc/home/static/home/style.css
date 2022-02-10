@@ -62,14 +62,13 @@ img {
 
 #cover-img {
     display: flex;
-    margin-top: 100;
-
+    margin: 0.5em 0.5em;
     justify-content: center;
 
 }
 
 #cover-img img {
-        width: 80%;
+        width: 100%;
 }
 
 #presentation {
@@ -137,7 +136,7 @@ h1 {
 
 #thanks {
     text-align: center;
-    padding: 20 80;
+    padding: 3% 5%;
 }
 
 #thanks p {
@@ -297,5 +296,16 @@ h1 {
         justify-content: space-between;
         padding: 3% 6%;
 
+    }
+
+    #cover-img {
+        display: flex;
+        margin-top: 100;
+        justify-content: center;
+
+    }
+
+    #cover-img img {
+            width: 80%;
     }
 }

@@ -149,12 +149,13 @@ h1 {
 
 #contact-container {
     background-color: black;
-    padding: 70 70 0 70;
 }
+
 #contact {
     background-color: rgb(25, 25, 25);
-    padding: 80;
+    padding: 6%;
     text-align: center;
+
 }
 
 #contact p {
@@ -308,4 +309,15 @@ h1 {
     #cover-img img {
             width: 80%;
     }
+
+    #contact-container {
+        background-color: black;
+        padding: 70 70 0 70;
+    }
+    #contact {
+        background-color: rgb(25, 25, 25);
+        padding: 80;
+        text-align: center;
+    }
+
 }

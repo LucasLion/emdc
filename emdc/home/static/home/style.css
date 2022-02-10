@@ -7,7 +7,6 @@ body {
     margin-left: auto;
     margin-right: auto;
     margin-top: 0;
-    min-width: 768;
     }
 
 ul {
@@ -118,26 +117,18 @@ p {
 .map {
     padding-bottom: 0;
 }
-.video {
-    margin: 10;
-    width: 23%;
-}
+
 
 .list-videos {
-    display: flex;
-    flex-direction: row;
-    padding: 40 70;
-    backgorund-color: black;
-    flex-wrap: wrap;
-    flex-grow: 1;
-    justify-content: space-evenly;
-    background-color: black;
+    display: grid;
+    background-color: blue;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 4fr));
+}
+
+.video {
 
 }
 
-.list-video > * {
-    flex: 1 1 10em;
-}
 .video-text {
     font-size: 15;
     margin: 5px;
@@ -198,23 +189,6 @@ p {
     margin: 7px;
 }
 
-@media only screen and (max-width: 768px) {
-
-    .list-videos {
-        display: block;
-        padding: 10;
-        backgorund-color: black;
-        justify-content: center;
-    }
-
-    .video {
-        width: 50%;
-    }
-
-    #contact-container {
-        padding: 0;
-    }
-}
 
 /* ------ HAMBURGER ------ */
 

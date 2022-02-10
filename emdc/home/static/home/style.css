@@ -80,18 +80,19 @@ img {
 #presentation {
     margin-left: auto;
     margin-right: auto;
+    font-size: 16px;
 
 }
 h1 {
-    font-size: clamp(3rem, 2rem + 3vw, 9rem);
+    font-size: clamp(3em, 2em + 3vw, 9em);
 }
 
-h3 {
-    font-size: 25;
+#presentation h3 {
+    font-size: clamp(1em, 1em + 1vw, 6em);
 }
 
-p {
-    font-size: 20;
+#presentation p {
+    font-size: clamp(0.2em, 1em + 1vw, 4em);
 }
 #presentation-content {
     width: 80%;
@@ -99,6 +100,7 @@ p {
     margin-right: auto;
     text-align: center;
     margin-bottom: 100px;
+    font-size: 1em;
 }
 
 /* ------ VIDEO AND MAP ------ */
@@ -121,16 +123,17 @@ p {
 
 .list-videos {
     display: grid;
-    background-color: blue;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 4fr));
+    background-color: black;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 4fr));
+    padding: 0.5em;
 }
 
 .video {
-
+    padding: 0.5em;
 }
 
 .video-text {
-    font-size: 15;
+    font-size: 1.2em;
     margin: 5px;
 
 }
@@ -143,7 +146,7 @@ p {
 }
 
 #thanks p {
-    font-size: 1.5rem;
+    font-size: clamp(0.2em, 1em + 0.5vw, 2.5em);
 }
 
 .underlined {

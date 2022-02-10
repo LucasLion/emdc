@@ -1,44 +1,7 @@
+{% extends 'home/base.html' %}
 {% load static %}
-{% load embed_video_tags %}
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title>site</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'home/style.css' %}">
 
-
-
-</head>
-<body>
-<header>
-    <div id="header">
-        <div id="logo-title">
-            <img src='{% static "media/logo.png" %}'>
-            <h2>{{ title }}</h2>
-        </div>
-        <nav class="header-contact">
-            <ul>
-                <li><a href="#">Accueil</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#" class="fa fa-instagram"></a></li>
-                <li><a href="#" class="fa fa-facebook"></a></li>
-            </ul>
-        </nav>
-        <button class="hamburger">
-            <div class="bar"></div>
-        </button>
-    </div>
-</header>
-<nav class="mobile-nav">
-    <li>Accueil</li>
-    <li>Contact</li>
-    <li><a href="#" class="fa fa-instagram"></a></li>
-    <li><a href="#" class="fa fa-facebook"></a></li>
-</nav>
-
+{% block content %}
 
     <div id="presentation">
         <div id="cover-img">
@@ -75,18 +38,16 @@
         <p class="underlined">MERCI DU FOND DU COEUR A NOS DONNATEURS</p>
         <p>JACQUES LEROY, LOIC LASSERRE, ZOE THIBURS, LORENZO D'ARRIGO, GILLES FLORIAN, JULIE MARTIN, MARIE EMILIA CHARON, JEAN LOUIS & SYLVIE DINE, BERNARD MILENE, FRANCK JANIN, ANDRE LAMEZEC, JEROME DUTRIEUX, VALERIE & MARC FOUCAULT, CHRISTOPHE AUBERTIN, MURIEL DUTRIEUX, FLORA SOUCHIER, HELENE VIQUESNEL LABIGUE, AMBRE MENANTAU, FRANCOIS BEL, ARNAUD BOUDIN, ISABELLE VINCENT, HENRI LEON LAMEZEC, DAMIEN ODIENNE, MICHELINE DINE, DELPHINE BEIGBEDER, JOSEPH MAIER, FRANCOIS CHABREDIER, YAEL EPYNEAU, ARMELLE & DENIS SEBILLE, ISABELLE SCHMITT, SIMON GRAINVILLE, CECILE CHARRIER, CLAIRE GEORGES, RAPHAEL PAUSCHITZ, MARTIN PAQUOT, JUSTINE PION, KANELLE POPULO, THEO CANEL, MARGAUX GUILLOUET, MARIE-FRANCE CHARRON, MARIE MAUCORPS, DENIS LECRUX, SIMON LOUCHE, ROSELINE VENOT, ARTHUR MICHARD, CLAIRE BERRIET, LOUISE JANNOT, ANDRES GERMAN GOMEZ, VALENTINE LESUR, MARGUERITE LAMEZEC, MARIE ANDREE JANNOT, PATRICK LEFTZ, LILIANE AZARIA, PATRICE DEBACQUE, GEOFFREY DINE, SOPHIE DUBREUIL, LOIC ANDRO, ARIANE & DOMINIQUE SIMON, MARINE DUPONT, ANNE SOPHIE BERGERES, LISA FIGUERAS, LUCIE FRIEDERICH, PAULINE THOER, YANN VERDIER, HANNAH DEMERSEMAN, JEANNE ZINDEL, LANCELOT DELACHAPELLE, MARIUS & LAURIANE DINE, PATRICIA URBANI, HI JIN MAGET, ADELE BONNEMAINS, JEAN-CHRISTINE LALLOUET TRAC, LUCAS LALLOUET, EDGAR DU PONT, JEAN PAUL RONDI, SOPHIE LOOTVOET, ERIC DUBOIS, SARAH SCHETRIT, FLORA LEFEVRE, LEONARD PIACENTINO, CAPUCINE PREVITALI, LEA DAL ZILIO, ANNICK ODIENNE, JACQUES & REGINE NEEL, JEAN & CATHERINE ZINDEL, GREGOIRE SIMON & TOINETTE LAFONTAINE, CEPHISE AMIOT BORIE, LUCAS CHAUBIER, NADIA & DENIS MARTIN, PAUL MARTIN, CAROLINE VIRY, LYSIANE DEBRAY, LUCAS LION</p>
     </div>
-    <div id="contact-container">
-        <div id="contact">
-            <h2>CONTACT</h2>
-            <ul>
-                <li>tourdesecomateriaux@gmail.com</li>
-                <li>07.88.34.77.70</li>
-                <li>06.52.81.90.46</li>
-                <li id="space-between-icons"><a href="#" class="fa fa-instagram"></a> <a href="#" class="fa fa-facebook"></a></li>
+        <div id="contact-container">
+            <div id="contact">
+                <h2>CONTACT</h2>
+                <ul>
+                    <li>tourdesecomateriaux@gmail.com</li>
+                    <li>07.88.34.77.70</li>
+                    <li>06.52.81.90.46</li>
+                    <li id="space-between-icons"><a href="https://www.instagram.com/en_matieres_de_construction/" class="fa fa-instagram"></a>
+                        <a href="https://www.facebook.com/En-mati%C3%A8res-de-construction-107615134382282" class="fa fa-facebook"></a></li>
+                </ul>
+            </div>
         </div>
-    <p id="footer">©2022 par En matièreS de construction. Créé par Lucas Lion</p>
-    </div>
-
-</body>
-<script src="{% static 'home/main.js' %}"></script>
-</html>
+{% endblock %}

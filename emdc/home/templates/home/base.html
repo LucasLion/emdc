@@ -1,0 +1,50 @@
+{% load static %}
+
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>En matièreS de construction</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'home/style.css' %}">
+        <link rel="stylesheet" href="{% static 'home/contact-style.css' %}">
+    </head>
+    <body>
+        <header>
+            <div id="header">
+                <div id="logo-title">
+                    <img src='{% static "media/logo.png" %}'>
+                    <h2>{{ title }}</h2>
+                </div>
+                <nav class="header-contact">
+                    <ul>
+                        <li><a href="{% url 'home' %}">Accueil</a></li>
+                        <li><a href="{% url 'contact' %}">Contact</a></li>
+                        <li><a href="https://www.instagram.com/en_matieres_de_construction/" class="fa fa-instagram"></a></li>
+                        <li><a href="https://www.facebook.com/En-mati%C3%A8res-de-construction-107615134382282" class="fa fa-facebook"></a></li>
+                    </ul>
+                </nav>
+                <button class="hamburger">
+                    <div class="bar"></div>
+                </button>
+            </div>
+        </header>
+        <nav class="mobile-nav">
+            <ul>
+                <li><a href="{% url 'home' %}">Accueil</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+                <li><a href="https://www.instagram.com/en_matieres_de_construction/" class="fa fa-instagram"></a></li>
+                <li><a href="https://www.facebook.com/En-mati%C3%A8res-de-construction-107615134382282" class="fa fa-facebook"></a></li>
+            </ul>
+        </nav>
+
+        {% block content %} {% endblock %}
+
+        <div id="footer">
+            <p >©2022 par En matièreS de construction. Créé par Lucas Lion</p>
+        </div>
+    </body>
+    <script src="{% static 'home/main.js' %}"></script>
+</html>
+

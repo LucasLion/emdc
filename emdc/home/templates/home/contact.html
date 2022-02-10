@@ -1,0 +1,23 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block content %}
+<div id="contact-container">
+    <div id="contact">
+        <h2>CONTACT</h2>
+        <ul>
+            <li>tourdesecomateriaux@gmail.com</li>
+            <li>07.88.34.77.70</li>
+            <li>06.52.81.90.46</li>
+            <li id="space-between-icons"><a href="#" class="fa fa-instagram"></a> <a href="#" class="fa fa-facebook"></a></li>
+        </ul>
+    </div>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Envoyer E-mail">
+    </form>
+
+</div>
+
+{% endblock %}

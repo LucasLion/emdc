@@ -36,6 +36,7 @@ def contact(request):
 def send_email(request,data):
     subject = request.POST.get('subject', data['object'])
     from_email = request.POST.get('message', data['email'])
+    # a faire: rendre l'envoi de mails plus lisible
     #phone = data['phone']
     #adress = data['adress']
     #zip_code = data['zip_code']

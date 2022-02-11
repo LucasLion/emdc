@@ -2,22 +2,28 @@
 {% load static %}
 
 {% block content %}
-<div id="contact-container">
-    <div id="contact">
-        <h2>CONTACT</h2>
-        <ul>
-            <li>tourdesecomateriaux@gmail.com</li>
-            <li>07.88.34.77.70</li>
-            <li>06.52.81.90.46</li>
-            <li id="space-between-icons"><a href="#" class="fa fa-instagram"></a> <a href="#" class="fa fa-facebook"></a></li>
-        </ul>
-    </div>
-    <form method="POST">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <input type="submit" value="Envoyer E-mail">
-    </form>
-
+<div class="contact-container contact-page-container">
+        <div class="contact contact-contact-page">
+            <h2>CONTACT</h2>
+            <ul>
+                <li>tourdesecomateriaux@gmail.com</li>
+                <li>07.88.34.77.70</li>
+                <li>06.52.81.90.46</li>
+                <li id="space-between-icons"><a href="https://www.instagram.com/en_matieres_de_construction/" class="fa fa-instagram"></a> <a href="https://www.facebook.com/En-mati%C3%A8res-de-construction-107615134382282" class="fa fa-facebook"></a></li>
+            </ul>
+        </div>
+        <form class="form-container" method="POST">
+            {% csrf_token %}
+            <div class="wrapper">
+                <div class="box a">{{ form.name }}</div>
+                <div class="box b">{{ form.email }}</div>
+                <div class="box c">{{ form.phone }}</div>
+                <div class="box d">{{ form.adress }}</div>
+                <div class="box e col-span-2">{{ form.object }}</div>
+                <div class="box f col-span-2 row-span-3">{{ form.message }}</div>
+                <input type="submit" value="Envoyer E-mail" class="btn col-span-2">
+            </div>
+        </form>
 </div>
 
 {% endblock %}

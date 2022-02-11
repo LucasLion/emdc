@@ -148,32 +148,32 @@ h1 {
     text-decoration: underline;
 }
 
-#contact-container {
+.contact-container {
     background-color: black;
 }
 
-#contact {
+.contact {
     background-color: rgb(25, 25, 25);
     padding: 6%;
     text-align: center;
 
 }
 
-#contact p {
+.contact p {
     list-style: none;
 }
 
-#contact h2 {
+.contact h2 {
     font-size: 50;
     margin: 10 0;
 }
 
-#contact li {
+.contact li {
     margin: 10;
     font-size: 19;
 }
 
-#contact a {
+.contact a {
     text-decoration: none;
     color: white;
     opacity: 0.7;
@@ -316,9 +316,9 @@ h1 {
         background-color: black;
         padding: 70 70 0 70;
     }
-    #contact {
+    .contact {
         background-color: rgb(25, 25, 25);
-        padding: 80;
+
         text-align: center;
     }
 

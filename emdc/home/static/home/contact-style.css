@@ -1,0 +1,89 @@
+
+.wrapper {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 15%;
+    background-color: black;
+}
+.form-container {
+    margin-bottom: 0;
+}
+.col-span-2 {
+    grid-column: span 2;
+}
+
+#id_name {
+    background-color: black;
+    border: none;
+    border-bottom: solid 0.2em white;
+    padding: 0.5em;
+    width: 100%;
+    color: white;
+}
+#id_email {
+    background-color: black;
+    border: none;
+    border-bottom: solid 0.2em white;
+    padding: 0.5em;
+    width: 100%;
+    color: white;
+}
+#id_phone {
+    background-color: black;
+    border: none;
+    border-bottom: solid 0.2em white;
+    padding: 0.5em;
+    width: 100%;
+    color: white;
+}
+#id_adress {
+    background-color: black;
+    border: none;
+    border-bottom: solid 0.2em white;
+    padding: 0.5em;
+    width: 100%;
+    color: white;
+}
+#id_object {
+    background-color: black;
+    border: none;
+    border-bottom: solid 0.2em white;
+    padding: 0.5em;
+    width: 100%;
+    color: white;
+}
+#id_message {
+    background-color: black;
+    border: none;
+    border-bottom: solid 0.2em white;
+    padding: 0.5em;
+    width: 100%;
+    color: white;
+}
+
+.btn {
+    width: 100%;
+    text-align: center;
+    color: black;
+    padding: 1em;
+    margin-top: 1em;
+    border: none;
+
+}
+
+.contact-page-container {
+    background-color: rgb(25, 25, 25);
+    padding: 5%;
+}
+.contact-contact-page {
+    background-color: black;
+}
+@media (min-width: 768px) {
+    .contact-page-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+
+}

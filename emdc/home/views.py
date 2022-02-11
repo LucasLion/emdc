@@ -1,7 +1,7 @@
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 from django.views.generic import ListView
-from .models import Video
+from .models import Video, IntroVideo
 from .forms import SendMailForm
 from django.core.mail import send_mail, BadHeaderError
 
@@ -11,10 +11,15 @@ class ListVideos(ListView):
     context_object_name = "videos"
 
 
+class IntroVideos(ListView):
+    model = Video
+    context_object_name = "introvideo"
+
 def index(request):
     title = "EN MATIÈRES DE CONSTRUCTION"
     videos = Video.objects.all()
-    response = render(request, "home/index.html", context={'title': title, 'videos': videos})
+    intro_video = IntroVideo.objects.all()
+    response = render(request, "home/index.html", context={'title': title, 'videos': videos, 'introvideo': intro_video})
     return response
 
 def contact(request):

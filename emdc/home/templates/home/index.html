@@ -5,7 +5,7 @@
 
     <div id="presentation">
         <div id="cover-img">
-            <img src='{% static "media/cover.png" %}'>
+
         </div>
         <div id="presentation-content">
             <h1>{{ title }}</h1>
@@ -15,14 +15,17 @@
         </div>
     </div>
     <div class="main-video main-video-map" >
-        <img src='{% static "media/main-video.png" %}'>
+        {% for vid in introvideo %}
+            <video width="100%" controls="controls">
+                <source src="{{ vid.video.url }}" type="video/mp4">
+            </video>
+        {% endfor %}
     </div>
     <div class="map main-video-map">
         <img src='{% static "media/carte.png" %}'>
     </div>
 
     <div class="list-videos">
-
         {% for video in videos %}
         <div class="video">
             <video width="100%" controls="controls">

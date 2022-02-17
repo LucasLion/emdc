@@ -30,7 +30,7 @@ def contact(request):
         if form.is_valid():
             print(form.cleaned_data)
             send_email(request, form.cleaned_data)
-            return HttpResponse("merci merci")
+            return HttpResponse("<h1>E-mail envoyé</h1>")
     else:
         form = SendMailForm()
 

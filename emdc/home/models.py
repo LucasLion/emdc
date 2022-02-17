@@ -1,8 +1,8 @@
 from pathlib import Path
 from django.core.exceptions import ValidationError
 from django.db import models
-from moviepy.editor import *
-from PIL import Image
+# from moviepy.editor import *
+# from PIL import Image
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -16,6 +16,7 @@ class Video(models.Model):
         return self.title
 
     # actually not working
+    '''
     def generate_video_thumbnail(self):
         thumbnail_dir = os.path.join(BASE_DIR, '../media_root/thumbnails')
         os.makedirs(thumbnail_dir, exist_ok=True)
@@ -34,7 +35,7 @@ class Video(models.Model):
         new_img = Image.fromarray(frame)
         new_img.save(new_img_file)
         print("thumbnail created")
-
+    '''
 
 class IntroVideo(models.Model):
     video = models.FileField(upload_to="video/%y")
